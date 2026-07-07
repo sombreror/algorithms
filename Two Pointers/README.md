@@ -117,13 +117,15 @@ Riconosci il pattern quando il problema ha questi indizi:
 
 ## Problemi classici per allenarsi
 
-| Problema | Difficoltà | Idea |
-|:---------|:----------:|:-----|
-| [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟢 Easy | Confronta i caratteri agli estremi e stringi verso il centro |
-| [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | 🟢 Easy | Somma troppo piccola? `left++` • Troppo grande? `right--` |
-| [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟡 Medium | Muovi sempre il puntatore con l'altezza minore |
-| [3Sum](https://leetcode.com/problems/3sum/) | 🟡 Medium | Fissa un elemento + two pointers sul resto |
-| [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🔴 Hard | Two pointers + massimo visto da ciascun lato |
+Le soluzioni sono nel repo [sombreror/leetcode](https://github.com/sombreror/leetcode): ogni link nella colonna *Soluzione* porta al write-up + codice JavaScript.
+
+| Problema | Difficoltà | Idea | Soluzione |
+|:---------|:----------:|:-----|:---------:|
+| [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟢 Easy | Confronta i caratteri agli estremi e stringi verso il centro | [0125](https://github.com/sombreror/leetcode/tree/main/solutions/0125-valid-palindrome) |
+| [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | 🟢 Easy | Somma troppo piccola? `left++` • Troppo grande? `right--` | [0167](https://github.com/sombreror/leetcode/tree/main/solutions/0167-two-sum-II) |
+| [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟡 Medium | Muovi sempre il puntatore con l'altezza minore | [0011](https://github.com/sombreror/leetcode/tree/main/solutions/0011-container-with-most-water) |
+| [3Sum](https://leetcode.com/problems/3sum/) | 🟡 Medium | Fissa un elemento + two pointers sul resto | [0015](https://github.com/sombreror/leetcode/tree/main/solutions/0015-3sum) |
+| [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🔴 Hard | Two pointers + massimo visto da ciascun lato | — |
 
 ---
 

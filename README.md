@@ -8,6 +8,7 @@
 [![Excalidraw](https://img.shields.io/badge/Excalidraw-Disegni-6965DB?style=for-the-badge&logo=excalidraw&logoColor=white)](https://excalidraw.com)
 [![Lingua](https://img.shields.io/badge/Lingua-Italiano-009246?style=for-the-badge)](#)
 [![Work in Progress](https://img.shields.io/badge/Status-In%20crescita-F59E0B?style=for-the-badge)](#-roadmap)
+[![LeetCode](https://img.shields.io/badge/Pratica-LeetCode%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://github.com/sombreror/leetcode)
 
 </div>
 
@@ -43,6 +44,22 @@ Ogni pattern ha la sua cartella con:
 
 > [!NOTE]
 > Il repository cresce nel tempo: ogni nuovo pattern viene prima **disegnato**, poi **spiegato**.
+
+---
+
+## Teoria + Pratica
+
+Questo repo è la **teoria**; la **pratica** vive nel repo gemello **[sombreror/leetcode](https://github.com/sombreror/leetcode)**, dove ogni problema ha il suo write-up e la soluzione JavaScript eseguibile.
+
+```mermaid
+graph LR
+    A["algorithms<br/>(pattern disegnati e spiegati)"] <--> B["leetcode<br/>(soluzioni ai problemi, in JS)"]
+
+    style A fill:#EDE9FE,stroke:#8B5CF6,color:#4C1D95
+    style B fill:#FEF3C7,stroke:#F59E0B,color:#78350F
+```
+
+Nei README dei pattern, la tabella dei problemi rimanda direttamente alla **mia soluzione** quando esiste: studi il pattern qui, poi vai a vedere come l'ho applicato davvero.
 
 ---
 
