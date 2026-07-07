@@ -27,7 +27,7 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Two Pointers.md"
+                "file": "Two Pointers/Two Pointers.md"
               },
               "icon": "excalidraw-icon",
               "title": "Two Pointers"
@@ -197,10 +197,11 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "d28bf2c5a65aa126",
+  "active": "91e7eef60886dbca",
   "lastOpenFiles": [
-    "Two Pointers.png",
-    "Two Pointers.md",
+    "Two Pointers",
+    "Two Pointers/Two Pointers.png",
+    "Two Pointers/Two Pointers.md",
     "Benvenuto.md"
   ]
 }
