@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👈 Two Pointers 👉
+# Two Pointers
 
 ### *Due indici, un solo passaggio: l'array non ha più segreti.*
 
@@ -13,15 +13,15 @@
 
 ---
 
-## 🎨 Il disegno
+## Il disegno
 
 ![Schema visuale del pattern Two Pointers](Two%20Pointers.png)
 
 ---
 
-## 💡 L'idea in una frase
+## L'idea in una frase
 
-Invece di confrontare ogni elemento con tutti gli altri (**O(n²)** 🐌), si usano **due puntatori** che partono dagli estremi opposti dell'array e si muovono uno verso l'altro (**O(n)** ⚡).
+Invece di confrontare ogni elemento con tutti gli altri (**O(n²)**), si usano **due puntatori** che partono dagli estremi opposti dell'array e si muovono uno verso l'altro (**O(n)**).
 
 ```diff
 + LEFT  → parte da sinistra e AUMENTA  (left++)
@@ -30,21 +30,21 @@ Invece di confrontare ogni elemento con tutti gli altri (**O(n²)** 🐌), si us
 
 > [!IMPORTANT]
 > **Quando i due puntatori si incontrano, hanno controllato TUTTI gli elementi dell'array.**
-> Il punto di incontro è esattamente il punto in cui si ferma il `while`: significa che abbiamo ciclato tutto l'array. 🎯
+> Il punto di incontro è esattamente il punto in cui si ferma il `while`: significa che abbiamo ciclato tutto l'array.
 
 ---
 
-## ⚙️ Come funziona
+## Come funziona
 
 ```mermaid
 graph TD
-    A["🚦 left = 0, right = n - 1"] --> B{"left < right ?"}
-    B -- "✅ Sì" --> C{"Controlla le condizioni"}
-    C -- "serve avanzare da sinistra" --> D["👉 left++"]
-    C -- "serve arretrare da destra" --> E["👈 right--"]
+    A["left = 0, right = n - 1"] --> B{"left < right ?"}
+    B -- "Sì" --> C{"Controlla le condizioni"}
+    C -- "serve avanzare da sinistra" --> D["left++"]
+    C -- "serve arretrare da destra" --> E["right--"]
     D --> B
     E --> B
-    B -- "❌ No — si sono incontrati" --> F["🏁 Array controllato al 100%"]
+    B -- "No — si sono incontrati" --> F["Array controllato al 100%"]
 
     style A fill:#DBEAFE,stroke:#3B82F6,color:#1E3A8A
     style B fill:#FEF3C7,stroke:#F59E0B,color:#78350F
@@ -54,17 +54,17 @@ graph TD
     style F fill:#EDE9FE,stroke:#8B5CF6,color:#4C1D95
 ```
 
-1. 🟢 **`left`** parte dal **primo** elemento e si muove verso destra
-2. 🔴 **`right`** parte dall'**ultimo** elemento e si muove verso sinistra
-3. 🔁 Ad ogni giro si controllano le **condizioni** del problema e si decide *quale* puntatore muovere
-4. 🏁 Quando `left` e `right` si incontrano, il ciclo termina: ogni elemento è stato visto
+1. **`left`** parte dal **primo** elemento e si muove verso destra
+2. **`right`** parte dall'**ultimo** elemento e si muove verso sinistra
+3. Ad ogni giro si controllano le **condizioni** del problema e si decide *quale* puntatore muovere
+4. Quando `left` e `right` si incontrano, il ciclo termina: ogni elemento è stato visto
 
 > [!TIP]
 > **La tecnica migliore è usare un `while`**, non un `for`: il `while(left < right)` si ferma da solo *esattamente* nel punto di incontro, senza bisogno di calcolare prima quante iterazioni servono.
 
 ---
 
-## ⌨️ Il template
+## Il template
 
 ```javascript
 let left = 0;
@@ -82,7 +82,7 @@ while (left < right) {
         continue;
     }
 
-    // 🎯 qui: left e right soddisfano ciò che cerchiamo
+    // qui: left e right soddisfano ciò che cerchiamo
     // → salva il risultato, poi muovi uno (o entrambi) i puntatori
 
 } // chiusura while → left e right si sono incontrati
@@ -92,30 +92,30 @@ Si continua con le condizioni all'interno per verificare se rispecchiano ciò ch
 
 ---
 
-## 📊 Complessità
+## Complessità
 
 | Metrica | Valore | Perché |
 |:--------|:------:|:-------|
-| ⏱️ **Tempo** | `O(n)` | Ogni elemento viene visitato **al massimo una volta**: i puntatori si muovono solo l'uno verso l'altro |
-| 💾 **Spazio** | `O(1)` | Servono solo due variabili (`left`, `right`), qualunque sia la dimensione dell'array |
+| **Tempo** | `O(n)` | Ogni elemento viene visitato **al massimo una volta**: i puntatori si muovono solo l'uno verso l'altro |
+| **Spazio** | `O(1)` | Servono solo due variabili (`left`, `right`), qualunque sia la dimensione dell'array |
 
 > [!NOTE]
-> Confronto con la forza bruta: due cicli annidati costano `O(n²)`. Su un array di 1.000.000 di elementi significa **1.000.000.000.000 di operazioni** contro **1.000.000**. 🤯
+> Confronto con la forza bruta: due cicli annidati costano `O(n²)`. Su un array di 1.000.000 di elementi significa **1.000.000.000.000 di operazioni** contro **1.000.000**.
 
 ---
 
-## 🎯 Quando usarlo
+## Quando usarlo
 
 Riconosci il pattern quando il problema ha questi indizi:
 
-- ✅ L'input è un **array ordinato** o una **stringa**
-- ✅ Cerchi una **coppia** di elementi che soddisfa una condizione (somma, distanza, …)
-- ✅ Devi confrontare elementi **agli estremi opposti** (es. palindromi)
-- ✅ La soluzione brute-force sarebbe `O(n²)` con due cicli annidati
+- L'input è un **array ordinato** o una **stringa**
+- Cerchi una **coppia** di elementi che soddisfa una condizione (somma, distanza, …)
+- Devi confrontare elementi **agli estremi opposti** (es. palindromi)
+- La soluzione brute-force sarebbe `O(n²)` con due cicli annidati
 
 ---
 
-## 🏋️ Problemi classici per allenarsi
+## Problemi classici per allenarsi
 
 | Problema | Difficoltà | Idea |
 |:---------|:----------:|:-----|
@@ -129,6 +129,6 @@ Riconosci il pattern quando il problema ha questi indizi:
 
 <div align="center">
 
-**[⬅️ Torna all'indice dei pattern](../README.md)**
+**[← Torna all'indice dei pattern](../README.md)**
 
 </div>
