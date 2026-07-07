@@ -2,49 +2,49 @@
 
 # Two Pointers
 
-### *Due indici, un solo passaggio: l'array non ha più segreti.*
+### *Two indices, one pass: the array has no secrets left.*
 
-[![Difficoltà](https://img.shields.io/badge/Difficolt%C3%A0-Facile-22C55E?style=for-the-badge)](#)
-[![Tempo](https://img.shields.io/badge/Tempo-O(n)-3B82F6?style=for-the-badge)](#-complessità)
-[![Spazio](https://img.shields.io/badge/Spazio-O(1)-8B5CF6?style=for-the-badge)](#-complessità)
-[![Categoria](https://img.shields.io/badge/Categoria-Array%20%2F%20Stringhe-F59E0B?style=for-the-badge)](#)
+[![Difficulty](https://img.shields.io/badge/Difficulty-Easy-22C55E?style=for-the-badge)](#)
+[![Time](https://img.shields.io/badge/Time-O(n)-3B82F6?style=for-the-badge)](#complexity)
+[![Space](https://img.shields.io/badge/Space-O(1)-8B5CF6?style=for-the-badge)](#complexity)
+[![Category](https://img.shields.io/badge/Category-Arrays%20%2F%20Strings-F59E0B?style=for-the-badge)](#)
 
 </div>
 
 ---
 
-## Il disegno
+## The drawing
 
-![Schema visuale del pattern Two Pointers](Two%20Pointers.png)
+![Visual scheme of the Two Pointers pattern](Two%20Pointers.png)
 
 ---
 
-## L'idea in una frase
+## The idea in one sentence
 
-Invece di confrontare ogni elemento con tutti gli altri (**O(n²)**), si usano **due puntatori** che partono dagli estremi opposti dell'array e si muovono uno verso l'altro (**O(n)**).
+Instead of comparing every element against all the others (**O(n²)**), you use **two pointers** starting from opposite ends of the array, moving toward each other (**O(n)**).
 
 ```diff
-+ LEFT  → parte da sinistra e AUMENTA  (left++)
-- RIGHT → parte da destra   e DIMINUISCE (right--)
++ LEFT  → starts on the left  and INCREASES (left++)
+- RIGHT → starts on the right and DECREASES (right--)
 ```
 
 > [!IMPORTANT]
-> **Quando i due puntatori si incontrano, hanno controllato TUTTI gli elementi dell'array.**
-> Il punto di incontro è esattamente il punto in cui si ferma il `while`: significa che abbiamo ciclato tutto l'array.
+> **When the two pointers meet, they have checked EVERY element of the array.**
+> The meeting point is exactly where the `while` stops: it means the whole array has been scanned.
 
 ---
 
-## Come funziona
+## How it works
 
 ```mermaid
 graph TD
     A["left = 0, right = n - 1"] --> B{"left < right ?"}
-    B -- "Sì" --> C{"Controlla le condizioni"}
-    C -- "serve avanzare da sinistra" --> D["left++"]
-    C -- "serve arretrare da destra" --> E["right--"]
+    B -- "Yes" --> C{"Check the conditions"}
+    C -- "need to advance from the left" --> D["left++"]
+    C -- "need to retreat from the right" --> E["right--"]
     D --> B
     E --> B
-    B -- "No — si sono incontrati" --> F["Array controllato al 100%"]
+    B -- "No — they met" --> F["Array 100% checked"]
 
     style A fill:#DBEAFE,stroke:#3B82F6,color:#1E3A8A
     style B fill:#FEF3C7,stroke:#F59E0B,color:#78350F
@@ -54,17 +54,17 @@ graph TD
     style F fill:#EDE9FE,stroke:#8B5CF6,color:#4C1D95
 ```
 
-1. **`left`** parte dal **primo** elemento e si muove verso destra
-2. **`right`** parte dall'**ultimo** elemento e si muove verso sinistra
-3. Ad ogni giro si controllano le **condizioni** del problema e si decide *quale* puntatore muovere
-4. Quando `left` e `right` si incontrano, il ciclo termina: ogni elemento è stato visto
+1. **`left`** starts at the **first** element and moves right
+2. **`right`** starts at the **last** element and moves left
+3. On every iteration you check the problem's **conditions** and decide *which* pointer to move
+4. When `left` and `right` meet, the loop ends: every element has been seen
 
 > [!TIP]
-> **La tecnica migliore è usare un `while`**, non un `for`: il `while(left < right)` si ferma da solo *esattamente* nel punto di incontro, senza bisogno di calcolare prima quante iterazioni servono.
+> **The best technique is a `while`, not a `for`:** `while (left < right)` stops by itself *exactly* at the meeting point, with no need to precompute how many iterations are required.
 
 ---
 
-## Il template
+## The template
 
 ```javascript
 let left = 0;
@@ -72,65 +72,65 @@ let right = array.length - 1;
 
 while (left < right) {
 
-    if (/* condizione: serve avanzare da sinistra */) {
+    if (/* condition: advance from the left */) {
         left++;
         continue;
     }
 
-    if (/* condizione: serve arretrare da destra */) {
+    if (/* condition: retreat from the right */) {
         right--;
         continue;
     }
 
-    // qui: left e right soddisfano ciò che cerchiamo
-    // → salva il risultato, poi muovi uno (o entrambi) i puntatori
+    // here: left and right satisfy what we are looking for
+    // → record the result, then move one (or both) pointers
 
-} // chiusura while → left e right si sono incontrati
+} // end of while → left and right have met
 ```
 
-Si continua con le condizioni all'interno per verificare se rispecchiano ciò che si cerca, aumentando `left` e diminuendo `right` fino all'incontro.
+Keep checking the conditions inside the loop to see whether they match what you are looking for, increasing `left` and decreasing `right` until they meet.
 
 ---
 
-## Complessità
+## Complexity
 
-| Metrica | Valore | Perché |
-|:--------|:------:|:-------|
-| **Tempo** | `O(n)` | Ogni elemento viene visitato **al massimo una volta**: i puntatori si muovono solo l'uno verso l'altro |
-| **Spazio** | `O(1)` | Servono solo due variabili (`left`, `right`), qualunque sia la dimensione dell'array |
+| Metric | Value | Why |
+|:-------|:-----:|:----|
+| **Time** | `O(n)` | Every element is visited **at most once**: the pointers only move toward each other |
+| **Space** | `O(1)` | Only two variables are needed (`left`, `right`), no matter how big the array is |
 
 > [!NOTE]
-> Confronto con la forza bruta: due cicli annidati costano `O(n²)`. Su un array di 1.000.000 di elementi significa **1.000.000.000.000 di operazioni** contro **1.000.000**.
+> Compared to brute force: two nested loops cost `O(n²)`. On an array of 1,000,000 elements that means **1,000,000,000,000 operations** versus **1,000,000**.
 
 ---
 
-## Quando usarlo
+## When to use it
 
-Riconosci il pattern quando il problema ha questi indizi:
+You recognize the pattern when the problem shows these clues:
 
-- L'input è un **array ordinato** o una **stringa**
-- Cerchi una **coppia** di elementi che soddisfa una condizione (somma, distanza, …)
-- Devi confrontare elementi **agli estremi opposti** (es. palindromi)
-- La soluzione brute-force sarebbe `O(n²)` con due cicli annidati
+- The input is a **sorted array** or a **string**
+- You are looking for a **pair** of elements satisfying a condition (sum, distance, …)
+- You need to compare elements at **opposite ends** (e.g. palindromes)
+- The brute-force solution would be `O(n²)` with two nested loops
 
 ---
 
-## Problemi classici per allenarsi
+## Classic problems to practice
 
-Le soluzioni sono nel repo [sombreror/leetcode](https://github.com/sombreror/leetcode): ogni link nella colonna *Soluzione* porta al write-up + codice JavaScript.
+Solutions live in the twin repo [sombreror/leetcode](https://github.com/sombreror/leetcode): every link in the *Solution* column leads to the write-up + runnable JavaScript code.
 
-| Problema | Difficoltà | Idea | Soluzione |
-|:---------|:----------:|:-----|:---------:|
-| [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟢 Easy | Confronta i caratteri agli estremi e stringi verso il centro | [0125](https://github.com/sombreror/leetcode/tree/main/solutions/0125-valid-palindrome) |
-| [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | 🟢 Easy | Somma troppo piccola? `left++` • Troppo grande? `right--` | [0167](https://github.com/sombreror/leetcode/tree/main/solutions/0167-two-sum-II) |
-| [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟡 Medium | Muovi sempre il puntatore con l'altezza minore | [0011](https://github.com/sombreror/leetcode/tree/main/solutions/0011-container-with-most-water) |
-| [3Sum](https://leetcode.com/problems/3sum/) | 🟡 Medium | Fissa un elemento + two pointers sul resto | [0015](https://github.com/sombreror/leetcode/tree/main/solutions/0015-3sum) |
-| [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🔴 Hard | Two pointers + massimo visto da ciascun lato | — |
+| Problem | Difficulty | Idea | Solution |
+|:--------|:----------:|:-----|:--------:|
+| [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟢 Easy | Compare characters at both ends and squeeze toward the center | [0125](https://github.com/sombreror/leetcode/tree/main/solutions/0125-valid-palindrome) |
+| [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | 🟢 Easy | Sum too small? `left++` • Too big? `right--` | [0167](https://github.com/sombreror/leetcode/tree/main/solutions/0167-two-sum-II) |
+| [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟡 Medium | Always move the pointer at the shorter height | [0011](https://github.com/sombreror/leetcode/tree/main/solutions/0011-container-with-most-water) |
+| [3Sum](https://leetcode.com/problems/3sum/) | 🟡 Medium | Fix one element + two pointers on the rest | [0015](https://github.com/sombreror/leetcode/tree/main/solutions/0015-3sum) |
+| [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🔴 Hard | Two pointers + max seen from each side | — |
 
 ---
 
 <div align="center">
 
-**[← Torna all'indice dei pattern](../README.md)**
+**[← Back to the pattern index](../README.md)**
 
 </div>

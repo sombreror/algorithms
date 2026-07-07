@@ -1,92 +1,95 @@
 <div align="center">
 
-# Algorithms — Appunti Visuali
+# Algorithms — Visual Notes
 
-### *Gli algoritmi si capiscono con gli occhi, non a memoria.*
+### *Algorithms are understood with your eyes, not memorized.*
 
 [![Obsidian](https://img.shields.io/badge/Obsidian-Vault-7C3AED?style=for-the-badge&logo=obsidian&logoColor=white)](https://obsidian.md)
-[![Excalidraw](https://img.shields.io/badge/Excalidraw-Disegni-6965DB?style=for-the-badge&logo=excalidraw&logoColor=white)](https://excalidraw.com)
-[![Lingua](https://img.shields.io/badge/Lingua-Italiano-009246?style=for-the-badge)](#)
-[![Work in Progress](https://img.shields.io/badge/Status-In%20crescita-F59E0B?style=for-the-badge)](#-roadmap)
-[![LeetCode](https://img.shields.io/badge/Pratica-LeetCode%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://github.com/sombreror/leetcode)
+[![Excalidraw](https://img.shields.io/badge/Excalidraw-Drawings-6965DB?style=for-the-badge&logo=excalidraw&logoColor=white)](https://excalidraw.com)
+[![LeetCode](https://img.shields.io/badge/Practice-LeetCode%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://github.com/sombreror/leetcode)
+
+[![Last commit](https://img.shields.io/github/last-commit/sombreror/algorithms?style=for-the-badge&color=10B981&label=Last%20commit)](https://github.com/sombreror/algorithms/commits/main)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/sombreror/algorithms?style=for-the-badge&color=3B82F6&label=Commits%2Fmonth)](https://github.com/sombreror/algorithms/graphs/commit-activity)
+[![Status](https://img.shields.io/badge/Status-Growing-F59E0B?style=for-the-badge)](#pattern-index)
 
 </div>
 
 ---
 
-## Cos'è questo repository
+## What is this repository
 
-Una raccolta di **appunti visuali sui pattern algoritmici** più importanti, disegnati a mano con **Excalidraw** dentro un vault **Obsidian**.
+A collection of **visual notes on the most important algorithmic patterns**, hand-drawn with **Excalidraw** inside an **Obsidian** vault.
 
-Ogni pattern ha la sua cartella con:
+Every pattern gets its own folder containing:
 
-| Contenuto | Descrizione |
-|:----------|:------------|
-| **Disegno** | Lo schema visuale del pattern, disegnato passo passo |
-| **Nota Excalidraw** | Il file sorgente, modificabile direttamente in Obsidian |
-| **README** | La spiegazione completa: come funziona, template di codice, complessità e problemi classici |
+| Content | Description |
+|:--------|:------------|
+| **Drawing** | The visual scheme of the pattern, drawn step by step |
+| **Excalidraw note** | The source file, editable directly in Obsidian |
+| **README** | The full write-up: how it works, code template, complexity, and classic problems |
 
 > [!TIP]
-> **Perché visuale?** Un pattern algoritmico non è una formula da imparare a memoria: è un *movimento*. Vedere i puntatori che si muovono, le finestre che scorrono, gli alberi che si dividono rende il concetto impossibile da dimenticare.
+> **Why visual?** An algorithmic pattern is not a formula to memorize — it is a *movement*. Watching pointers slide, windows glide, and trees split makes the concept impossible to forget.
 
 ---
 
-## Indice dei Pattern
+## Pattern Index
 
-| # | Pattern | Difficoltà | Stato |
-|:-:|:--------|:----------:|:-----:|
-| 1 | **[Two Pointers](Two%20Pointers/README.md)** | 🟢 Facile | Completo |
-| 2 | Sliding Window | 🟢 Facile | In arrivo |
-| 3 | Binary Search | 🟡 Media | In arrivo |
-| 4 | Fast & Slow Pointers | 🟡 Media | In arrivo |
-| 5 | BFS / DFS | 🟡 Media | In arrivo |
-| 6 | Dynamic Programming | 🔴 Difficile | In arrivo |
+| # | Pattern | Difficulty | Status |
+|:-:|:--------|:----------:|:------:|
+| 1 | **[Two Pointers](Two%20Pointers/README.md)** | 🟢 Easy | Done |
+| 2 | Sliding Window | 🟢 Easy | Planned |
+| 3 | Binary Search | 🟡 Medium | Planned |
+| 4 | Fast & Slow Pointers | 🟡 Medium | Planned |
+| 5 | BFS / DFS | 🟡 Medium | Planned |
+| 6 | Dynamic Programming | 🔴 Hard | Planned |
 
 > [!NOTE]
-> Il repository cresce nel tempo: ogni nuovo pattern viene prima **disegnato**, poi **spiegato**.
+> This repository grows over time: every new pattern gets **drawn first**, then **explained**.
+> The *Last commit* badge above always shows how fresh these notes are.
 
 ---
 
-## Teoria + Pratica
+## Theory + Practice
 
-Questo repo è la **teoria**; la **pratica** vive nel repo gemello **[sombreror/leetcode](https://github.com/sombreror/leetcode)**, dove ogni problema ha il suo write-up e la soluzione JavaScript eseguibile.
+This repo is the **theory**; the **practice** lives in the twin repo **[sombreror/leetcode](https://github.com/sombreror/leetcode)**, where every problem has its own write-up and a runnable JavaScript solution.
 
 ```mermaid
 graph LR
-    A["algorithms<br/>(pattern disegnati e spiegati)"] <--> B["leetcode<br/>(soluzioni ai problemi, in JS)"]
+    A["algorithms<br/>(patterns drawn & explained)"] <--> B["leetcode<br/>(problem solutions, in JS)"]
 
     style A fill:#EDE9FE,stroke:#8B5CF6,color:#4C1D95
     style B fill:#FEF3C7,stroke:#F59E0B,color:#78350F
 ```
 
-Nei README dei pattern, la tabella dei problemi rimanda direttamente alla **mia soluzione** quando esiste: studi il pattern qui, poi vai a vedere come l'ho applicato davvero.
+Inside each pattern README, the problems table links straight to **my actual solution** whenever one exists: study the pattern here, then go see how it was applied for real.
 
 ---
 
-## Come usare questi appunti
+## How to use these notes
 
-### Da GitHub (solo lettura)
-Sfoglia le cartelle: ogni README mostra il disegno e la spiegazione completa. Non serve installare nulla.
+### From GitHub (read-only)
+Browse the folders: every README shows the drawing and the full write-up. Nothing to install.
 
-### Da Obsidian (modifica)
-1. Clona il repository:
+### From Obsidian (editable)
+1. Clone the repository:
    ```bash
    git clone https://github.com/sombreror/algorithms.git
    ```
-2. Apri la cartella come **vault** in [Obsidian](https://obsidian.md)
-3. Installa il plugin **Excalidraw** (già configurato in `.obsidian/`)
-4. Apri una nota e passa alla *Excalidraw View* per modificare i disegni
+2. Open the folder as a **vault** in [Obsidian](https://obsidian.md)
+3. Install the **Excalidraw** plugin (already configured in `.obsidian/`)
+4. Open a note and switch to *Excalidraw View* to edit the drawings
 
 ---
 
-## Filosofia
+## Philosophy
 
 ```mermaid
 graph LR
-    A["Problema"] --> B["Disegno il pattern"]
-    B --> C["Capisco il movimento"]
-    C --> D["Scrivo il template"]
-    D --> E["Risolvo qualsiasi variante"]
+    A["Problem"] --> B["Draw the pattern"]
+    B --> C["Understand the movement"]
+    C --> D["Write the template"]
+    D --> E["Solve any variant"]
 
     style A fill:#FEE2E2,stroke:#EF4444,color:#7F1D1D
     style B fill:#FEF3C7,stroke:#F59E0B,color:#78350F
@@ -99,8 +102,8 @@ graph LR
 
 <div align="center">
 
-**Appunti di [sombreror](https://github.com/sombreror)**
+**Notes by [sombreror](https://github.com/sombreror)**
 
-*Se questi appunti ti sono utili, lascia una stella.*
+*If these notes help you, leave a star.*
 
 </div>
