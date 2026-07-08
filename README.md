@@ -8,8 +8,8 @@
 [![Excalidraw](https://img.shields.io/badge/Excalidraw-Drawings-6965DB?style=for-the-badge&logo=excalidraw&logoColor=white)](https://excalidraw.com)
 [![LeetCode](https://img.shields.io/badge/Practice-LeetCode%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://github.com/sombreror/leetcode)
 
-[![Last commit](https://img.shields.io/github/last-commit/sombreror/algorithms?style=for-the-badge&color=10B981&label=Last%20commit)](https://github.com/sombreror/algorithms/commits/main)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/sombreror/algorithms?style=for-the-badge&color=3B82F6&label=Commits%2Fmonth)](https://github.com/sombreror/algorithms/graphs/commit-activity)
+[![Last commit](https://img.shields.io/github/last-commit/sombreror/algorithms-and-data-structure?style=for-the-badge&color=10B981&label=Last%20commit)](https://github.com/sombreror/algorithms-and-data-structure/commits/main)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/sombreror/algorithms-and-data-structure?style=for-the-badge&color=3B82F6&label=Commits%2Fmonth)](https://github.com/sombreror/algorithms-and-data-structure/graphs/commit-activity)
 [![Status](https://img.shields.io/badge/Status-Growing-F59E0B?style=for-the-badge)](#pattern-index)
 
 </div>
@@ -90,7 +90,7 @@ Browse the folders: every README shows the drawing and the full write-up. Nothin
 ### From Obsidian (editable)
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sombreror/algorithms.git
+   git clone https://github.com/sombreror/algorithms-and-data-structure.git
    ```
 2. Open the folder as a **vault** in [Obsidian](https://obsidian.md)
 3. Install the **Excalidraw** plugin (already configured in `.obsidian/`)
