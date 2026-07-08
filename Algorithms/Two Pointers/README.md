@@ -28,6 +28,8 @@ Instead of comparing every element against all the others (**O(n²)**), you use 
 - RIGHT → starts on the right and DECREASES (right--)
 ```
 
+The whole trick rests on one property of the [Array](../../Data%20Structures/Array/README.md): reading `array[i]` costs **O(1)**, so moving a pointer is free — the only thing that matters is *how many* moves you make.
+
 > [!IMPORTANT]
 > **When the two pointers meet, they have checked EVERY element of the array.**
 > The meeting point is exactly where the `while` stops: it means the whole array has been scanned.
@@ -104,6 +106,21 @@ Keep checking the conditions inside the loop to see whether they match what you 
 
 ---
 
+## The variants
+
+This page covers the classic **converging** variant, but the same idea — two indices instead of two nested loops — comes in three shapes:
+
+| Variant | Movement | Typical use |
+|:--------|:---------|:------------|
+| **Converging** (this page) | `left →` … `← right` from opposite ends | Palindromes, pair sums on sorted arrays |
+| **Same direction** (read / write) | Both move left → right, at different speeds | Remove duplicates in place, partitioning |
+| **Fast & Slow** | One moves 2 steps, the other 1 | Cycle detection, middle of a linked list *(gets its own pattern page)* |
+
+> [!NOTE]
+> [Sliding Window](../Sliding%20Window/README.md) is itself a same-direction two-pointers technique: `left` and `right` delimit the window.
+
+---
+
 ## When to use it
 
 You recognize the pattern when the problem shows these clues:
@@ -112,6 +129,9 @@ You recognize the pattern when the problem shows these clues:
 - You are looking for a **pair** of elements satisfying a condition (sum, distance, …)
 - You need to compare elements at **opposite ends** (e.g. palindromes)
 - The brute-force solution would be `O(n²)` with two nested loops
+
+> [!WARNING]
+> The converging variant on pair-sum problems needs the array to be **sorted**: moving `left++`/`right--` is a deduction ("the sum is too small, so I need a bigger number") that only holds if the order is guaranteed. Unsorted input → sort first, or use a [Hash Map](../../Data%20Structures/Hash%20Map/README.md) (see Two Sum).
 
 ---
 
@@ -131,6 +151,6 @@ Solutions live in the twin repo [sombreror/leetcode](https://github.com/sombrero
 
 <div align="center">
 
-**[← Back to the pattern index](README.md)**
+**[← Back to the pattern index](../../README.md)**
 
 </div>
