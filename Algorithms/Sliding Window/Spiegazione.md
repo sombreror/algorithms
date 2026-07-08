@@ -80,6 +80,10 @@ La Sliding Window è spesso la soluzione giusta quando il problema parla di:
 - somma massima/minima
 - lunghezza massima/minima
 
+**Attenzione:** la finestra funziona solo su intervalli **contigui**. Se il problema permette di scegliere elementi non adiacenti (sottosequenze), la Sliding Window non è lo strumento giusto.
+
+**Fissa o variabile?** Se il problema dà la dimensione (`k` elementi) è fissa; se chiede l'intervallo *più lungo/più corto* con una certa proprietà è variabile.
+
 ---
 
 # Schema generale
