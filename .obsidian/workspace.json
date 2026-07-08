@@ -25,16 +25,30 @@
             "id": "d28bf2c5a65aa126",
             "type": "leaf",
             "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algorithms/Two Pointers/README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "88b7161188ed1e90",
+            "type": "leaf",
+            "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Two Pointers/Two Pointers.md"
+                "file": "Algorithms/Sliding Window/Sliding Window.md"
               },
               "icon": "excalidraw-icon",
-              "title": "Two Pointers"
+              "title": "Sliding Window"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -197,11 +211,23 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "91e7eef60886dbca",
+  "active": "88b7161188ed1e90",
   "lastOpenFiles": [
-    "Two Pointers",
-    "Two Pointers/Two Pointers.png",
-    "Two Pointers/Two Pointers.md",
+    "Algorithms/Sliding Window/Sliding Window.png",
+    "Algorithms/Sliding Window/Spiegazione.md",
+    "Algorithms/Sliding Window/Sliding Window.md",
+    "Data Structure/HashMap",
+    "Data Structure/Array",
+    "Data Structure",
+    "Algorithms",
+    "Algorithms/Two Pointers/Two Pointers.md",
+    "Algorithms/Two Pointers/Two Pointers.png",
+    "Algorithms/Two Pointers/README.md",
+    "Algorithms/Sliding Window",
+    "README.md",
+    "Algorithms/Two Pointers/Spiegazione.md",
+    "Drawing 2026-07-07 12.54.48.excalidraw.md",
+    "Algorithms/Two Pointers",
     "Benvenuto.md"
   ]
 }

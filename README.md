@@ -37,7 +37,7 @@ Every pattern gets its own folder containing:
 
 | # | Pattern | Difficulty | Status |
 |:-:|:--------|:----------:|:------:|
-| 1 | **[Two Pointers](Two%20Pointers/README.md)** | 🟢 Easy | Done |
+| 1 | **[Two Pointers](Algorithms/Two%20Pointers/README.md)** | 🟢 Easy | Done |
 | 2 | Sliding Window | 🟢 Easy | Planned |
 | 3 | Binary Search | 🟡 Medium | Planned |
 | 4 | Fast & Slow Pointers | 🟡 Medium | Planned |

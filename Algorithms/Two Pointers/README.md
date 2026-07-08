@@ -131,6 +131,6 @@ Solutions live in the twin repo [sombreror/leetcode](https://github.com/sombrero
 
 <div align="center">
 
-**[← Back to the pattern index](../README.md)**
+**[← Back to the pattern index](README.md)**
 
 </div>
