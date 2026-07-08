@@ -18,7 +18,7 @@
 
 ## What is this repository
 
-A collection of **visual notes on the most important algorithmic patterns**, hand-drawn with **Excalidraw** inside an **Obsidian** vault.
+A collection of **visual notes on the most important algorithmic patterns and the data structures they run on**, hand-drawn with **Excalidraw** inside an **Obsidian** vault.
 
 Every pattern gets its own folder containing:
 
@@ -33,12 +33,28 @@ Every pattern gets its own folder containing:
 
 ---
 
+## Data Structure Index
+
+The structures the patterns run on: what they look like in memory, what each operation costs, and when to reach for them.
+
+| # | Structure | Key operation | Status |
+|:-:|:----------|:--------------|:------:|
+| 1 | **[Array](Data%20Structures/Array/README.md)** | Access by index — `O(1)` | Done |
+| 2 | **[Hash Map](Data%20Structures/Hash%20Map/README.md)** | Lookup by key — `O(1)` avg | Done |
+| 3 | Stack / Queue | Push & pop at the ends — `O(1)` | Planned |
+| 4 | Linked List | Insert/remove at a node — `O(1)` | Planned |
+
+> [!NOTE]
+> Data structure pages use inline text diagrams for now; Excalidraw drawings will join them over time.
+
+---
+
 ## Pattern Index
 
 | # | Pattern | Difficulty | Status |
 |:-:|:--------|:----------:|:------:|
 | 1 | **[Two Pointers](Algorithms/Two%20Pointers/README.md)** | 🟢 Easy | Done |
-| 2 | Sliding Window | 🟢 Easy | Planned |
+| 2 | **[Sliding Window](Algorithms/Sliding%20Window/README.md)** | 🟢 Easy | Done |
 | 3 | Binary Search | 🟡 Medium | Planned |
 | 4 | Fast & Slow Pointers | 🟡 Medium | Planned |
 | 5 | BFS / DFS | 🟡 Medium | Planned |
